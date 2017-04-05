@@ -238,7 +238,10 @@ def tf_diffeomorphism(input, diffeomorphism_map):
         x_2d, y_2d = _meshgrid_2d(height, width)
         x_flat = tf.reshape(x_2d, [-1])
         y_flat = tf.reshape(y_2d, [-1])
-
+        
+        x_f_tiled = tf.tile(x_flat, [batch_size])
+        y_f_tiled = tf.tile(y_flat, [batch_size])
+        
         x_int_tiled = to_int_tiled(x_flat, width - 1)
         y_int_tiled = to_int_tiled(y_flat, height - 1)
 
@@ -251,7 +254,7 @@ def tf_diffeomorphism(input, diffeomorphism_map):
 
         x_off = tf.gather_nd(diff_resized_x, tf.transpose(indicies))
         y_off = tf.gather_nd(diff_resized_y, tf.transpose(indicies))
-        return tf_warp(input, x_flat - x_off, y_flat - y_off)
+        return tf_warp(input, x_f_tiled - x_off, y_f_tiled - y_off)
 
 
 def combine_diffeomorphism(diffeomorphisms, size=None):
