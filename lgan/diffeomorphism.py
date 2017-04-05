@@ -11,16 +11,11 @@
 
 from skimage.transform import warp, resize, rescale
 from skimage.filters import gaussian
-from skimage.data import astronaut
 from skimage.color import rgb2gray
 
 import numpy as np
 import matplotlib.pyplot as plt
 from pylab import rcParams
-from scipy.misc import imread, imsave
-from diktya.numpy import tile
-import moviepy.editor as mpy
-from IPython.display import HTML
 import tensorflow as tf
 
 
