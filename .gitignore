@@ -1,0 +1,7 @@
+MNIST_data/
+LabelGAN.egg-info/
+logs/
+.git/
+.ipynb_checkpoints/
+/diffeomorphism-tensorflow.ipynb
+lgan/__pycache__/
