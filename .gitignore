@@ -5,3 +5,8 @@ logs/
 .ipynb_checkpoints/
 /diffeomorphism-tensorflow.ipynb
 lgan/__pycache__/
+faces_only/
+faces/
+out/
+out-celebA/
+setup.py/
