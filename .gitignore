@@ -10,3 +10,10 @@ faces/
 out/
 out-celebA/
 setup.py/
+checkpoints-celeba/
+models/
+out-celeba-faces/
+out-celebA-faces/
+out-mnist
+LabelGAN-celebA-mean.ipynb
+LabelGAN-Faces.ipynb
